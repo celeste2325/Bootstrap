@@ -1,0 +1,10 @@
+.container{
+    background-color:rgb(92, 140, 212);
+    font-family: 'Courier New', Courier, monospace;
+}
+.col{
+    border: 1px solid white;
+}
+.row{
+    height: 100px;
+}

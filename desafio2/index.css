@@ -1,0 +1,8 @@
+.container{
+    background-color: orange;
+}
+
+.col-lg, .col-6{
+    border: 1px solid white;
+    height: 100px;
+}

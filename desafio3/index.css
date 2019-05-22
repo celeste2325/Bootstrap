@@ -1,0 +1,9 @@
+/* .container{
+    background-color: black;
+} */
+
+.col{
+    background-color: red;
+    height: 70px;
+    border: 1px solid white;
+}
