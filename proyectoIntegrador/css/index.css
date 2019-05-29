@@ -7,12 +7,43 @@
     width: 80px;
  }
  
-#btnPlatzi{
+#txtPlatzi{
     color: #97c93e;
-    
 }
+
 /* header */
 
+/* main */
+#btnPlatzi{
+    background-color: #97c93e;
+    color: white;   
+}
+
+.container, .row, .overlay, #carousel{
+    height: 100%;
+}
+.carousel-inner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel img {
+    max-height:70vh;
+    filter: grayscale(70%); /*filtro para que se opaquen las imagenes*/
+  }
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* /main */
 
 
 
