@@ -45,6 +45,41 @@
 
 /* /main */
 
+/* oradores */
+
+.rowTitulo{
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+   
+}
+.tituloChico{
+    font-variant: small-caps;
+}
+
+.card-text{
+    margin-top: 8px;
+}
+
+/* /oradores */
+
+/* conociendo Honolulu */
+.rowHonolulu .col-12, .col-6{
+    padding: 0;
+    background-color: #343a40;
+}
+.rowHonolulu img{
+    width: 100%;
+}
+.descriptionHululu{
+    color: white;
+    padding: 8px 15px 15px; 
+    font-weight: lighter;
+font-size: 1.25em;
+}
+
+/* /conociendo Honolulu */
 
 
 
