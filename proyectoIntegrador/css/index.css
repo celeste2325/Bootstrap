@@ -87,3 +87,18 @@ font-size: 1.25em;
 
 /* /conviertete en orador */
 
+/* footer */
+
+footer{
+    background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);
+    padding: 24px 0;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:white;
+}
+/* /footer */
