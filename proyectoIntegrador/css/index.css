@@ -14,12 +14,13 @@
 /* header */
 
 /* main */
-#btnPlatzi{
+.btnPlatzi{
     background-color: #97c93e;
     color: white;   
 }
 
-.container, .row, .overlay, #carousel{
+
+.container, .rowOverlay, .overlay, #carousel{
     height: 100%;
 }
 .carousel-inner{
@@ -82,5 +83,7 @@ font-size: 1.25em;
 /* /conociendo Honolulu */
 
 
+/* conviertete en orador */
 
+/* /conviertete en orador */
 

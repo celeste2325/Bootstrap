@@ -65,7 +65,7 @@
 
         <div class="overlay">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row rowOverlay align-items-center">
                     <div class="col-12 text-center col-md-6 offset-md-6 text-md-right">
                         <!--para medidas medianas ocupa 6 columnas,
                          tiene 6 de margen a la derecha y el texto esta hacia la derecha
@@ -80,8 +80,8 @@
                             Ven a conocer a miembros del Team Platzi, a otros estudiantes de Platzi y a los
                             conferencistas de primer nivel que tenemos para vos. ¡Te esperamos!
                         </p>
-                        <a href="#" class="btn  btn-outline-light">Quiero ser orador</a>
-                        <button type="button" class="btn" id="btnPlatzi">Comprar tickets</button>
+                        <a href="#form-orador" class="btn  btn-outline-light">Quiero ser orador</a>
+                        <button type="button" class="btn btnPlatzi">Comprar tickets</button>
                     </div>
                 </div>
             </div>
@@ -200,23 +200,76 @@
             </div>
             <div class="col-lg-6 col-12">
                 <section class="descriptionHululu">
-                
-                        <h2>Honolulu</h2>
-                  <p">Honolulú​ es la capital y localidad más grande del estado de Hawái, en los Estados
-                    Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque
-                    el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y
-                    el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla
-                    (aproximadamente 600 km² de superficie).
-                </p>
 
-                    <a href="https://es.wikipedia.org/wiki/Honolulu" target="_black" class="btn btn-outline-light">Conoce más</a>
+                    <h2>Honolulu</h2>
+                    <p">Honolulú​ es la capital y localidad más grande del estado de Hawái, en los Estados
+                        Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque
+                        el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la
+                        ciudad y
+                        el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla
+                        (aproximadamente 600 km² de superficie).
+                        </p>
+
+                        <a href="https://es.wikipedia.org/wiki/Honolulu" target="_black"
+                            class="btn btn-outline-light">Conoce más</a>
             </div>
-        </section>
+            </section>
         </div>
     </div>
 
     <!-- /conociendo Honolulu -->
 
+    <!-- conviertete en orador -->
+
+
+    <section class="convierteteEnOrador text-center" id="form-orador">
+        <div class="container">
+
+            <div class="row rowTitulo pb-1">
+                <small class="tituloChico">conviértete en un</small>
+                <h2>orador</h2>
+            </div>
+
+            <div class="row pb-2">
+                <div class="col">Anótate como orador para dar una charla
+                    <div role="alert" class="d-inline">
+                        <a href="#" class="alert-link alerta">ignite</a>
+                    </div>en la conferencia. Cuéntanos de qué quieres
+                    hablar!
+                </div>
+            </div>
+
+            <form action="">
+                <div class="form-row justify-content-center">
+                    <div class="col-sm-6 col-12 col-md-4  form-group">
+                        <input type="text" class="form-control" placeholder="Nombre">
+                    </div>
+
+                    <div class="col-sm-6 col-12 col-md-4 form-group">
+                        <input type="text" class="form-control" placeholder="Apellido">
+                    </div>
+
+                    <div class="col-md-8">
+                        <textarea class="form-control" rows="3" placeholder="¿Sobre que quieres hablar?"></textarea>
+                    </div>
+                    <div class="col-12 col-md-8 form-group text-left text-muted">
+                        <small>Recuerda incluir un título para tu charla</small>
+                    </div>
+
+                    <div class="col-md-8 form-group">
+                        <button type="button" class="btn btn-block btnPlatzi btnOrador">Enviar</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- /conviertete en orador -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
