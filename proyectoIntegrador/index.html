@@ -14,9 +14,9 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="60">
     <!--Header-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="navbar">
         <div class="container">
 
             <a class="navbar-brand" href="#"><img src="images/platzi-logo.png" alt="foto logo platzi"> Conf Hawaii</a>
@@ -25,22 +25,23 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">La conferencia<span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carousel">La conferencia<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Los oradores</a>
+                        <a class="nav-link" href="#orador">Los oradores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                        <a class="nav-link" href="#lugarFecha">El lugar y la fecha</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Conviértete en orador</a>
+                        <a class="nav-link" href="#form-orador">Conviértete en orador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="txtPlatzi" href="#">Comprar tickets</a>
+                        <a class="nav-link" id="txtPlatzi" href="" data-toggle="modal"
+                        data-target="#modalComprarTickets">Comprar tickets</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +82,8 @@
                             conferencistas de primer nivel que tenemos para vos. ¡Te esperamos!
                         </p>
                         <a href="#form-orador" class="btn  btn-outline-light">Quiero ser orador</a>
-                        <button type="button" class="btn btnPlatzi">Comprar tickets</button>
+                        <button type="button" class="btn btnPlatzi" data-toggle="modal"
+                            data-target="#modalComprarTickets">Comprar tickets</button>
                     </div>
                 </div>
             </div>
@@ -91,7 +93,7 @@
 
     <!-- oradores -->
     <div class="container">
-        <section class="oradores">
+        <section class="oradores" id="orador">
 
             <div class="row rowTitulo">
                 <small class="tituloChico">conoce a</small>
@@ -194,7 +196,7 @@
     <!-- conociendo Honolulu -->
 
     <div class="container-fluid">
-        <div class="row rowHonolulu">
+        <div class="row rowHonolulu" id="lugarFecha">
             <div class="col-lg-6 col-12">
                 <img src="images/honolulu.jpg" alt="fotoHonolulu">
             </div>
@@ -231,9 +233,10 @@
 
             <div class="row pb-2">
                 <div class="col">Anótate como orador para dar una charla
-                    <div role="alert" class="d-inline">
-                        <a href="#" class="alert-link alerta">ignite</a>
-                    </div>en la conferencia. Cuéntanos de qué quieres
+                    <!-- span con un alert de tipo informativo y un tooltip de tipo top para mostrar inf de q que se trata ignite -->
+                    <span class="alert-info alert-link" data-toggle="tooltip" data-placement="top"
+                        title="Charlas de 5min">Ignite</span>
+                    en la conferencia. Cuéntanos de qué quieres
                     hablar!
                 </div>
             </div>
@@ -274,18 +277,56 @@
         <div class="container">
 
             <div class="row text-center">
-                <div class="col-12 col-lg"><a href="#">Preguntas frecuentes</a></div>
-                <div class="col-12 col-lg"><a href="#">Contáctanos</a></div>
-                <div class="col-12 col-lg"><a href="#">Prensa</a></div>
-                <div class="col-12 col-lg"><a href="#">Conferencias</a></div>
-                <div class="col-12 col-lg"><a href="#">Términos y condiciones</a></div>
-                <div class="col-12 col-lg"><a href="#">Privacidad</a></div>
-                <div class="col-12 col-lg"><a href="#">Estudiantes</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Preguntas frecuentes</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Contáctanos</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Prensa</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Conferencias</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Términos y condiciones</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Privacidad</a></div>
+                <div class="col-12 col-lg"><a href="#" target="_blank">Estudiantes</a></div>
 
             </div>
         </div>
     </footer>
     <!-- /footer -->
+
+
+    <!-- modal -->
+    <div class="modal fade" id="modalComprarTickets" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Comprar tickets</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div> -->
+                <div class="modal-body">
+                        <label class="sr-only" for="inlineFormInputGroup"></label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">platzi.com/</div>
+                          </div>
+                          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nombre de usuario en Platzi">
+                        </div>
+                        <div class="alert alert-warning mt-4" role="alert">
+                                Recibirás un correo de confirmación si sales sorteado
+                              </div>
+
+                      </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btnPlatzi">comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal -->
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -298,6 +339,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
